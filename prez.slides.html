@@ -7498,6 +7498,48 @@ main {
 </div>
 </div>
 </div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=60db56ea">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="%F0%9F%A7%AE-C'est-quoi-la-tokenization-?">🧮 C'est quoi la tokenization ?<a class="anchor-link" href="#%F0%9F%A7%AE-C'est-quoi-la-tokenization-?">¶</a></h1><div style="font-size: 24px;">
+<p>La tokenization, ou lexing, est le processus de décomposition d'une chaîne de caractères (comme du code source) en unités significatives appelées "tokens". Chaque token représente un élément syntaxique de la langue, comme un mot-clé, un identifiant, un opérateur, un séparateur...</p>
+<p>C'est comme un ft_split où chaque mot est accompagné d'un type !</p>
+</div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=57a2708a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Exemple-de-structure">Exemple de structure<a class="anchor-link" href="#Exemple-de-structure">¶</a></h2><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">enum</span><span class="w"> </span><span class="n">type</span>
+<span class="p">{</span>
+<span class="w">	</span><span class="n">INVALID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="c1">// pratique</span>
+<span class="w">	</span><span class="n">WORD</span><span class="p">,</span><span class="w"> </span><span class="c1">// ls</span>
+<span class="w">	</span><span class="n">PIPE</span><span class="p">,</span><span class="w"> </span><span class="c1">// '|'</span>
+<span class="w">	</span><span class="n">REDIN</span><span class="p">,</span><span class="w"> </span><span class="c1">// &lt; input.txt</span>
+<span class="w">	</span><span class="n">HEREDOC</span><span class="p">,</span><span class="w"> </span><span class="c1">// &lt;&lt; DELIMITER</span>
+<span class="w">	</span><span class="n">REDOUT</span><span class="p">,</span><span class="w"> </span><span class="c1">// &gt; output.txt</span>
+<span class="w">	</span><span class="n">APPEND</span><span class="p">,</span><span class="w"> </span><span class="c1">// &gt;&gt; output.txt</span>
+<span class="w">	</span><span class="n">END</span>
+<span class="p">}</span><span class="w">		</span><span class="n">t_type</span><span class="p">;</span>
+
+<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">s_token</span><span class="w"> </span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kt">char</span><span class="w">  </span><span class="o">*</span><span class="n">word</span><span class="p">;</span><span class="w">   </span><span class="c1">// le texte du token</span>
+<span class="w">  </span><span class="kt">int</span><span class="w">   </span><span class="n">type</span><span class="p">;</span><span class="w"> </span><span class="c1">// son type</span>
+<span class="p">}</span><span class="w">   </span><span class="n">t_token</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b9850284">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7645,48 +7687,6 @@ main {
 </div>
 </div>
 </div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=60db56ea">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="%F0%9F%A7%AE-C'est-quoi-la-tokenization-?">🧮 C'est quoi la tokenization ?<a class="anchor-link" href="#%F0%9F%A7%AE-C'est-quoi-la-tokenization-?">¶</a></h1><div style="font-size: 24px;">
-<p>La tokenization, ou lexing, est le processus de décomposition d'une chaîne de caractères (comme du code source) en unités significatives appelées "tokens". Chaque token représente un élément syntaxique de la langue, comme un mot-clé, un identifiant, un opérateur, un séparateur...</p>
-<p>C'est comme un ft_split où chaque mot est accompagné d'un type !</p>
-</div>
-</div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=57a2708a">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Exemple-de-structure">Exemple de structure<a class="anchor-link" href="#Exemple-de-structure">¶</a></h2><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">enum</span><span class="w"> </span><span class="n">type</span>
-<span class="p">{</span>
-<span class="w">	</span><span class="n">INVALID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="c1">// pratique</span>
-<span class="w">	</span><span class="n">WORD</span><span class="p">,</span><span class="w"> </span><span class="c1">// ls</span>
-<span class="w">	</span><span class="n">PIPE</span><span class="p">,</span><span class="w"> </span><span class="c1">// '|'</span>
-<span class="w">	</span><span class="n">REDIN</span><span class="p">,</span><span class="w"> </span><span class="c1">// &lt; input.txt</span>
-<span class="w">	</span><span class="n">HEREDOC</span><span class="p">,</span><span class="w"> </span><span class="c1">// &lt;&lt; DELIMITER</span>
-<span class="w">	</span><span class="n">REDOUT</span><span class="p">,</span><span class="w"> </span><span class="c1">// &gt; output.txt</span>
-<span class="w">	</span><span class="n">APPEND</span><span class="p">,</span><span class="w"> </span><span class="c1">// &gt;&gt; output.txt</span>
-<span class="w">	</span><span class="n">END</span>
-<span class="p">}</span><span class="w">		</span><span class="n">t_type</span><span class="p">;</span>
-
-<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">s_token</span><span class="w"> </span>
-<span class="p">{</span>
-<span class="w">  </span><span class="kt">char</span><span class="w">  </span><span class="o">*</span><span class="n">word</span><span class="p">;</span><span class="w">   </span><span class="c1">// le texte du token</span>
-<span class="w">  </span><span class="kt">int</span><span class="w">   </span><span class="n">type</span><span class="p">;</span><span class="w"> </span><span class="c1">// son type</span>
-<span class="p">}</span><span class="w">   </span><span class="n">t_token</span><span class="p">;</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ee6564df">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7765,7 +7765,7 @@ main {
 <li>Si il y a plusieurs redirections la dernière (la plus à droite) est utilisée</li>
 </ol>
 </div>
-<p><img alt="" src="captures/many_red.png"/></p>
+<img alt="No description has been provided for this image" src="captures/many_red.png" style="width: 100%;"/>
 </div>
 </div>
 </div>
@@ -7783,6 +7783,18 @@ Les suites de charactères qui ne sont pas des pipes, ni des heredoc, ni des red
 sont des <em>word</em> !<br/>
 Le plus à gauche est l'exécutable et les suivants sont les arguments.</p>
 </div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c33718dc">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Tester-son-tokenizer-%F0%9F%A7%AA">Tester son tokenizer 🧪<a class="anchor-link" href="#Tester-son-tokenizer-%F0%9F%A7%AA">¶</a></h1><p>L'éxecutable de mon tokenizer est dispo sur le repo</p>
+<img alt="No description has been provided for this image" src="captures/tokenizer.png" style="width: 90%;"/>
 </div>
 </div>
 </div>
